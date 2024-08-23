@@ -1,0 +1,47 @@
+## Codigo binario
+
+Um byte é composto por sequencia binaria chamada de bit (binary digit)
+
+### Binario para Hexadecimal (5A)
+0  1  0  1  |  1  0  1  0
+--------------------------
+2³ 2² 2¹ 2º | 2³ 2² 2¹ 2º 
+8  4  2  1  | 8  4  2  1
+   4  +  1  | 8  +  2
+   5        |    10 = A
+
+
+### Binario para Deccimal  (90)
+ 128 64 32 16 8 4 2 1
+ 0   1  0   1 1 0 1 0
+
+### Hexadecimal pra Decimal
+B     1     0     5
+16³  16²   16¹   16°
+4096 256   16     1
+
+5 * 1 = 5
+0 * 16 = 0
+1 * 256 = 256
+11 * 4096 = 45056
+
+5 + 0 + 256 + 45056 = 45317
+
+### Decimal para Hexa
+1615 base 10
+Divisão
+1615/16 = 100 sobra 15(final)
+100/16 = (inicio)6 sobra 4
+15 =  F
+64F
+
+### Decimal para Binario
+25 base 10
+
+25/2 > 24 sobra 1 (final)
+12/2 > 6 sobra 0
+6/2 > 3 sobra 0
+3/2 >  (inicio)1 sobra 1
+Binario 11001
+
+
