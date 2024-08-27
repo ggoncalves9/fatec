@@ -1,0 +1,69 @@
+## Desenvolvimeto de database 
+
+  ### Tipos de motores de gerenciamento
+  postgreSQL
+  MySQL
+  MariaDB
+  Oracle
+  SQLServer
+  DBz
+  ...
+
+
+  ### Tipos de dados e Estrutura SQL ( SQL vs NoSql)
+  Dominio
+  char - tamanho do campo fixo 
+  var char - tamanho expansivo
+
+  utilizar char para ex, telefone ou estado, nomes com tamanhos fixos em campos
+
+  ### Banco SQL e NoSQL
+
+    Dados semiestruturados, combinação das duas estruturas, ou seja, não possuem estruturara totlaamente rigida nem estrutura totalmente flexivelm sendo uma representação
+     heterogenea
+  Exemplo um arquivo em XML (eXtensible Markup Language, que significa, em portugues, Linguagem de Marcação Estendida), o qual possui nós, que são rotuladas de abertura e fechamento, precedidos por "/"
+
+
+      - Dados estruturados
+      - Dados semi estruturados
+      - Dados não estruturados
+
+Estrutura de dados
+    E.D. Homogenea = mesmo tipo
+      Vetor e Matriz
+      obs: vetor, uma unica coluna
+    E.D. Heterogenea = diferente tipo
+        
+      
+diferença entre char e int para numero, é determinado em relação se for utilizado para calculo, então utilizar int, outrem, char ou varchar
+
+obs: chave candidada =  precisa ser unica
+
+  O modelo Formal apoiado na Teoria dos conjuntos
+
+
+  relação (tabela)
+  atributo (coluna)
+  tupla(linhas)
+
+
+  os 10 conceitos Chaves do MR - Revisão
+- 1 relação  atributo
+  2 dominios
+  chave primaria
+  .....
+
+  unarias, binarias e ternarias
+  - 
+  - 
+  - 
+  
+  
+## Linguagem de acesso de dados
+
+  ### Definição de Dados (DDL)
+  ### Linguagem de Manipulaçãode Dados (LMD)
+  ### Comandos para manipulação ddos dados BD (CRUD) Create,Read,Upgrade,Delete
+
+  
+  
