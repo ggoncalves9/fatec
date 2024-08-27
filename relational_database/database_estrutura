@@ -65,5 +65,21 @@ obs: chave candidada =  precisa ser unica
   ### Linguagem de Manipulaçãode Dados (LMD)
   ### Comandos para manipulação ddos dados BD (CRUD) Create,Read,Upgrade,Delete
 
-  
+
+## Algebra e calculo relacional
+- Algebra relacional;
+  - consulta algebricos (+, -, *, / )e de predicados (V ou F)
+  - ORU (projeção, restrição, renomeação, seleção)
+  - ORB (produto cartesiano,junção,interceção,divisão, adição)
+  ...
+
+- Calculo relacional;
+
+
+- sql structure query language;
+ 
+
+DMM ??
+
+
   
