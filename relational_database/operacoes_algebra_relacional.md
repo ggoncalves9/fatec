@@ -3,8 +3,7 @@
 | Operação da Álgebra Relacional | Descrição | Equivalente em SQL |
 |--------------------------------|-----------|---------------------|
 | **União (∪)**                  | Combina duas relações e elimina duplicatas. | `UNION` |
-| **Interssecção (∩)**           | Retorna as linhas (tuplas) que são comuns a duas tabelas (relações) |  
-EXCEPT e INTERSECT |
+| **Interssecção (∩)**           | Retorna as linhas (tuplas) que são comuns a duas tabelas (relações) |  EXCEPT e INTERSECT |
 | **Diferença (-)**              | Retorna tuplas que estão na primeira relação e não na segunda. | `EXCEPT` ou `MINUS` (dependendo do sistema de banco de dados) |
 | **Produto Cartesiano (×)**     | Combina cada tupla da primeira relação com cada tupla da segunda. | `CROSS JOIN` |
 | **Seleção (σ)**                | Filtra as tuplas de uma relação com base em uma condição. | `SELECT ... WHERE ...` |
