@@ -44,3 +44,19 @@ relacional que mostre os projetos que o funcionário participa.
 supervisionam empregados que trabalham no departamento número 2
 
 π Nome (σ Depto=2 (tb_Empregado)∪π Nome (σ Depto=2 (tb_Empregado⋈tb_Empregado.RG_Gerent)))
+
+
+1) d) Modelo relacional (SQL), NoSQL, rede e hierárquico
+
+2) d) A operação de União entre duas tabelas A e B resulta em uma nova tabela que inclui todas as tuplas que estão em A e em B, simultaneamente.
+Essa afirmação está incorreta porque a operação de união entre duas tabelas inclui as tuplas que estão em A ou B, e não simultaneamente.
+
+3) d) restrição e projeção.
+
+4) e) R |x| S.
+
+5)b) projeção.
+
+6)d) Os itens I, II e III são verdadeiros.
+
+7)d) (1, N).
