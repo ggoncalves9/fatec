@@ -1,0 +1,52 @@
+As quatro gerações dos computadores
+- geração de válvulas
+- geração transistor
+- geração Circuito Integrado
+- geração Microprocessador
+
+Definições de hardware, software e firmware
+- Hardware - fisico
+- Software - virtual/logico
+- Firmware - logico de baixo nivel
+
+Definição basicas dos componentes de um computador
+- Placa-mae
+- processador
+- memoria
+- HD
+- fonte de energia
+
+Arquitetura de CPU
+RISC e CISC
+
+Base numéricas e conversões
+- decimal
+ 	decimal para binario - dividir por 2
+	
+- octal
+- hexadecimal
+
+Álgebra boolena com portas logicas em circuitos, funções e tabela verdade
+- E
+- OU
+- Ñ
+- Ñ E (NAND)
+- Ñ OU (NOR)
+- ou exclusivo (XOR)
+
+IoT, redes e microcontroladores
+- IoT, são dispositivos tecnologicos que utiliza tecnolgia 
+- Redes, interligação entre computadores
+- 
+
+Linguagem de programação e arduino
+C++
+
+Teleprocessamento e redes
+
+Sistema operacionais
+- Sistemas logicos para interpretação de componentes de hardware para vizualição
+
+Banco de dados e cloud
+- bancos de informações
+-  computação a nivel de cluster
