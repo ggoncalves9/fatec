@@ -1,0 +1,72 @@
+Database Relacional Listamysql03
+Fatec
+My SQL - Lista 03
+Guilherme Gonçalves
+
+(a) Selecione apenas as colunas Nome_Produto, Marca_Produto e Preco_Unit. (Renomeie
+essas colunas para Nome do Produto, Marca e Preço Unitário).
+
+
+SELECT Nome_Produto AS Produto, Marca_Produto AS Marca, Preco_Unit AS Preço Unitário from tb_Produtos 
+
+(b) Selecione as 8 primeiras linhas da tabela de clientes (considere todas as colunas).
+
+SELECT * FROM tb_Clientes LIMIT 8;
+
+
+(c) Faça uma consulta na tabela de clientes e ordene a tabela de acordo com a coluna de
+Data_Nascimento, em ordem decrescente.
+
+SELECT * FROM tb_Clientes ORDER BY Data_Nascimento DESC;
+
+(d) Faça uma consulta na tabela de clientes, ordenando a tabela de acordo com o nome (ordem
+alfabética) e sobrenome (ordem alfabética). Retorne todas as colunas e linhas da tabela.
+
+SELECT * FROM tb_Clientes ORDER BY nome ASC, sobrenome ASC;
+
+(e) Faça um filtro na tabela de produtos e retorne apenas os produtos com custo maior ou igual
+a 200.
+
+SELECT * FROM tb_Produtos WHERE Custo_Unit >= 200
+
+(f) Faça um filtro na tabela de produtos e retorne apenas os produtos da marca "DELL"
+
+SELECT * FROM tb_Produto WHERE marca='DELL'
+
+(g) Descubra o total de custo da tabela de pedidos.
+
+SELET SUM(Cust_Unit) FROM tb_Pedidos;
+
+(h) Descubra a quantidade total de lojas.
+
+SELECT COUNT(DISTINCT ID_loja) FROM tb_pedidos;
+
+(i) Descubra o custo médio dos produtos (de acordo com a tabela de produtos).
+
+SELET AVG(Custo_nit) FROM tb_produtos;
+
+
+(j) Descubra a quantidade mínima e máxima de funcionários das lojas (faça isso em um único
+SELECT).
+
+SELECT MIN(funcionarios),MAX(fucionarios) FROM tb_Funcionarios; (mas não existe essa tabela ou coluna)
+para clientes seria: SELECT MIN(nome), MAX(nome) FROM tb_Clientes;
+
+
+(k) Faça um agrupamento para descobrir o total de clientes por Sexo.
+
+SELECT sexo, COUNT(*) AS total_clientes FROM tb_clientes GROUP BY sexo;
+
+
+(l) Faça um agrupamento para descobrir quantos produtos existem por categoria.
+
+SELECT ID_Categoria, COUNT (*) AS total categoria FROM tb_Produtos GROUP BY Nome_produto;
+
+(m) Faça um agrupamento para descobrir a soma total de receita por Loja.
+
+SELECT Custo_Unit, COUNT(*) AS Custo_Total FROM tb_Pedidos GROUP BY ID_Loja;
+
+
+1) São modelos de Sistemas Gerenciadores de Bancos de Dados:
+
+(e) Modelo orientado a objetos, de atributos e referencial

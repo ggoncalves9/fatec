@@ -1,0 +1,126 @@
+Database Relacional Listamysql04
+Fatec
+My SQL - Lista 04
+Guilherme Gonçalves
+
+
+1
+SELECT * FROM tb_vendas INNER JOIN tb_clientes c
+
+
+
+SELECT 
+    v.id_venda, 
+    c.nm_cliente, 
+    c.cid_cliente, 
+    v.id_produto, 
+    v.quantidade, 
+    v.data_venda
+FROM tb_vendas v
+INNER JOIN tb_clientes c ON v.id_cliente = c.id_cliente
+ORDER BY c.nm_cliente;
+
+
+2
+SELECT 
+    v.id_venda, 
+    p.nm_produto, 
+    p.pre_produto, 
+    v.id_cliente, 
+    v.quantidade, 
+    v.data_venda
+FROM tb_vendas v
+INNER JOIN tb_produtos p ON v.id_produto = p.id_produto
+ORDER BY p.nm_produto;
+
+3
+SELECT 
+    v.id_venda, 
+    c.nm_cliente, 
+    p.nm_produto, 
+    p.pre_produto, 
+    v.quantidade, 
+    v.data_venda
+FROM tb_vendas v
+INNER JOIN tb_clientes c ON v.id_cliente = c.id_cliente
+INNER JOIN tb_produtos p ON v.id_produto = p.id_produto
+ORDER BY c.nm_cliente;
+
+4
+SELECT 
+    v.id_venda, 
+    c.nm_cliente, 
+    c.cid_cliente, 
+    p.nm_produto, 
+    p.pre_produto, 
+    v.quantidade, 
+    v.data_venda
+FROM tb_vendas v
+INNER JOIN tb_clientes c ON v.id_cliente = c.id_cliente
+INNER JOIN tb_produtos p ON v.id_produto = p.id_produto
+ORDER BY p.nm_produto;
+
+5
+SELECT 
+    v.id_venda, 
+    c.nm_cliente, 
+    c.cid_cliente, 
+    p.nm_produto, 
+    p.pre_produto, 
+    v.quantidade, 
+    v.data_venda
+FROM tb_vendas v
+LEFT JOIN tb_clientes c ON v.id_cliente = c.id_cliente
+LEFT JOIN tb_produtos p ON v.id_produto = p.id_produto
+ORDER BY p.nm_produto;
+
+6
+SELECT 
+    c.nm_cliente, 
+    SUM(v.quantidade) AS total_produtos
+FROM tb_vendas v
+INNER JOIN tb_clientes c ON v.id_cliente = c.id_cliente
+GROUP BY c.nm_cliente
+ORDER BY c.nm_cliente;
+
+7
+SELECT 
+    c.cid_cliente, 
+    SUM(v.quantidade) AS total_produtos
+FROM tb_vendas v
+INNER JOIN tb_clientes c ON v.id_cliente = c.id_cliente
+GROUP BY c.cid_cliente
+ORDER BY c.cid_cliente;
+
+
+8
+SELECT 
+    c.nm_cliente, 
+    SUM(p.pre_produto * v.quantidade) AS total_gasto
+FROM tb_vendas v
+INNER JOIN tb_clientes c ON v.id_cliente = c.id_cliente
+INNER JOIN tb_produtos p ON v.id_produto = p.id_produto
+GROUP BY c.nm_cliente
+ORDER BY c.nm_cliente;
+
+9
+SELECT 
+    nm_produto, 
+    pre_produto
+FROM tb_produtos
+WHERE pre_produto > (SELECT AVG(pre_produto) FROM tb_produtos);
+
+
+parte 2
+
+1 b)
+2 c)
+3 b)
+4 b)
+5 c)
+6 c)
+7 a)
+8 a)
+9 a)
+10 a)
+
