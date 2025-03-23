@@ -17,7 +17,7 @@ graph TD
 
     A --> D[ETAPA 3: Análise e Treinamento de Agentes]
     D --> D1[Análise dos Processos Empresariais]
-    D --> D2[Agente Entrevistador (Fine-tuning/CoT/ToT)]
+    D --> D2[Agente Entrevistador Fine-tuning/CoT/ToT]
     D --> D3[Design Step-by-Step para Treinamento]
     
     A --> E[ETAPA 4: Implantação e Ajustes]
