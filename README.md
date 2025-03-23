@@ -1,2 +1,5 @@
-# fatec
-Aulas e finalização do curso tecnologo em Redes da Computação
+# FATEC
+
+## Finish Him!
+
+Finalizar o projeto do TG e a amolação de Cálculo.
