@@ -1,3 +1,5 @@
+```mermaid
+
 graph TD  
     A[CEO] --> B[CFO]  
     A --> C[CTO]  
@@ -15,3 +17,4 @@ graph TD
     style A fill:#2ecc71,stroke:#27ae60  
     style B,C,D fill:#3498db,stroke:#2980b9  
     style E,F,G,H fill:#9b59b6,stroke:#8e44ad  
+```
