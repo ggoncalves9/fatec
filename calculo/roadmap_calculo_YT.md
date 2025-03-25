@@ -1,30 +1,67 @@
-# Calculo 1
+# 📘 Roadmap de Estudos - Cálculo 1
 
-[link] https://www.youtube.com/watch?v=UoILFhy2xUI&list=PLmAu9dltGZtp1apl5ib_uL7UkP4fDwy4m&ab_channel=takhe
+[🎥 Playlist sugerida](https://www.youtube.com/watch?v=UoILFhy2xUI&list=PLmAu9dltGZtp1apl5ib_uL7UkP4fDwy4m&ab_channel=takhe)
 
-## Limites ( 1 semana)
-Dias -  Temas - Capitulos
-1 -  Entender Limites (3.1 e 3.2)
+## 🗓️ Cronograma Geral
+- **Início:** 4 de abril de 2025
+- **Término:** 30 de maio de 2025
+- **Dias de estudo:** Sextas-feiras, das 9h às 11h (2 horas por semana)
 
-2 -  Definição de Limites (3.3 e 3.4)
-3 -  Propriedades & Teorema do Confronto (3.5 até 3.9)
-4 -  Limites e o infinito (4.1 e 4.2) pode estudar 4.3 e 4.4
-5 -  Teoremas Classicos ( Cap 5)
+---
 
-##  Derivadas ( 1 semana)
-1 - Definição de Derivadas (7.1 e 7.2)
-2 - Derivadas Classicas (7.3 Até 7.5)
-3 - Propriedades da Derivada ( Da soma, do produto) ; Regra da cadeia; Derivada de Ordem (Como temos muitos assuntos, podemos dividir) (7.6 até 7.10)
-4 - L'Hopital (calcular os limites usando derivadas muito facil) (9.1 até 9.4)
-5 - Pontos Criticos (A derivada te ensina a encontrar maximas e minimas de uma parabola) (9.5 até 9.8)
+## 📌 **Semana 1: Limites**
 
-## Integral
-1 - Primitivas ( entender a integral com a operação inversa da Integral) (10)
-2 - Integral de Riemann ( Definição formal de Integral usando limites) & Propriedades (11.1 até 11.5)
-3 - Integral Classicas (12.1)
-- Tecnicas de integração:
-4 - Mudaça de variavel (Primeira tecnica de integraçao, mudar a variavel de uma integral) (12.1)
-5 - Integral por partes (Olhar para regra do produto da Derivada e entender que ela surgiu da derivação de um produto) (12.2 até 12.3 e 12.4)
+### **04/04/2025** - Conceitos Iniciais de Limites
+- Capítulo 3.1 e 3.2
+- Objetivo: Compreender o que é um limite e como ele se aplica a funções.
+
+### **11/04/2025** - Definição Formal de Limites
+- Capítulo 3.3 e 3.4
+- Objetivo: Entender a definição rigorosa de limites e como utilizá-la.
+
+### **18/04/2025** - Propriedades e Teorema do Confronto
+- Capítulo 3.5 até 3.9
+- Objetivo: Estudar as propriedades dos limites e o teorema do confronto.
+
+### **25/04/2025** - Limites no Infinito
+- Capítulo 4.1 e 4.2 (Extra: 4.3 e 4.4)
+- Objetivo: Entender como os limites se comportam no infinito.
+
+---
+
+## 📌 **Semana 2: Derivadas**
+
+### **02/05/2025** - Definição de Derivada
+- Capítulo 7.1 e 7.2
+- Objetivo: Compreender a definição da derivada como limite.
+
+### **09/05/2025** - Derivadas Clássicas
+- Capítulo 7.3 até 7.5
+- Objetivo: Calcular derivadas de funções básicas.
+
+### **16/05/2025** - Propriedades das Derivadas
+- Capítulo 7.6 até 7.10
+- Objetivo: Estudar regras da soma, produto, cadeia e derivadas de ordem superior.
+
+### **23/05/2025** - Regra de L'Hôpital
+- Capítulo 9.1 até 9.4
+- Objetivo: Resolver limites indeterminados usando derivadas.
+
+---
+
+## 📌 **Semana 3: Integrais**
+
+### **30/05/2025** - Primitivas e Integral de Riemann
+- Capítulo 10 e Capítulo 11.1 até 11.5
+- Objetivo: Compreender a integral como operação inversa da derivada e definir integral usando somas de Riemann.
 
 
+---
+
+## 🎯 **Objetivos finais:**
+- Dominar os fundamentos de cálculo diferencial e integral.
+- Saber resolver problemas com limites, derivadas e integrais.
+- Estar preparado para provas e exercícios práticos.
+
+✨ **Bora garantir essa aprovação!** 🚀
 
