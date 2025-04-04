@@ -2,6 +2,19 @@
 **Data da Prova:** 25/04/2025  
 **Dias de Estudo:** Terça, Quarta, Sexta, Sábado  
 **Duração por Sessão:** 1,5h  
+---
+
+## 📅 **Calendário de Abril 2025**
+| Seg | Ter         | Qua         | Qui | Sex         | Sáb        | Dom |
+|-----|-------------|-------------|-----|-------------|------------|-----|
+| 31  | **1**       | 2           | 3   | 4           | 5          | 6   |
+| 7   | **[8](#semana-1)** 🟢 | **[9](#semana-1)** 🟢 | 10  | **[11](#semana-1)** 🟢 | **[12](#semana-1)** 🟢 | 13  |
+| 14  | **[15](#semana-2)** 🔵 | **[16](#semana-2)** 🔵 | 17  | **[18](#semana-2)** 🔵 | **[19](#semana-2)** 🔵 | 20  |
+| 21  | **[22](#semana-3)** 🟣 | **[23](#semana-3)** 🟣 | 24  | **[25](#semana-3)** 🔴 | 26         | 27  |
+| 28  | 29          | 30          |     |             |            |     |
+
+**Legenda:**  
+- 🟢 Semana 1 | 🔵 Semana 2 | 🟣 Semana 3 | 🔴 **Dia da Prova**  
 
 ---
 
