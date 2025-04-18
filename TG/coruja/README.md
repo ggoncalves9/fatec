@@ -2,6 +2,9 @@
 
 Este é o projeto Coruja: um sistema que envia quizzes diários para alunos via WhatsApp, utilizando agentes inteligentes em Kubernetes. Este MVP será executado localmente, e depois migrado para AWS EKS.
 
+
+![alt text](fluxo.png)
+
 ## ✅ Etapas do Projeto
 
 ### 🧱 Etapa 1 - Ambiente Local (MVP)
@@ -34,9 +37,16 @@ Este é o projeto Coruja: um sistema que envia quizzes diários para alunos via 
 ```bash
 coruja/
 ├── docker-compose.yaml
-├── initdb/
-│   └── init.sql
+├── postgresSQL/
+│   ├── initdb/
+│   │   └── init.sql
+│   ├── database-conf/
+│   │   └── seed_questoes.sql
 ├── agents/
+│   ├── Dockerfile
+│   ├── cronjob.txt
+│   └── question_selector.py
+
 │   ├── validator.py
 │   ├── question_generator.py
 │   └── responder.py
@@ -60,3 +70,4 @@ coruja/
 │   ├── cronjobs/
 │   └── secrets/
 └── README.md
+```

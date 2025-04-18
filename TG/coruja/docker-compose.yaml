@@ -1,19 +1,122 @@
-version: "3.9"
+version: '3.9'
+
+x-build-args: &build-args
+  BUILDKIT_INLINE_CACHE: 1
+  DOCKER_BUILDKIT: 1
 
 services:
+  proxy:
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+      args: *build-args
+    container_name: coruja_proxy
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+      ui:
+        condition: service_started
+    networks:
+      - default
+
+  ui:
+    build: 
+      context: ./ui
+      dockerfile: Dockerfile
+      args: *build-args
+    container_name: coruja_ui
+    expose:
+      - "80"
+    networks:
+      - default
+
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+      args: *build-args
+    container_name: coruja_backend
+    expose:
+      - "5000"
+    environment:
+      - DB_HOST=db_postgres
+      - DB_PORT=5432
+      - DB_NAME=coruja
+      - DB_USER=postgres
+      - DB_PASS=postgres
+      - OLLAMA_HOST=ollama
+      - OLLAMA_PORT=11434
+      - JWT_SECRET_KEY=sua_chave_secreta_aqui
+      - PYTHONPATH=/app
+    depends_on:
+      db_postgres:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - default
+
+  question_agent:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile.agent
+      args: *build-args
+    container_name: coruja_agent
+    environment:
+      - DB_HOST=db_postgres
+      - DB_PORT=5432
+      - DB_NAME=coruja
+      - DB_USER=postgres
+      - DB_PASS=postgres
+      - OLLAMA_HOST=ollama
+      - OLLAMA_PORT=11434
+    depends_on:
+      db_postgres:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    networks:
+      - default
+
   db_postgres:
     image: postgres:15
     container_name: coruja_postgres
-    restart: always
     environment:
-      POSTGRES_USER: coruja_user
-      POSTGRES_PASSWORD: coruja_pass
-      POSTGRES_DB: coruja_db
-    ports:
-      - "5432:5432"
+      - POSTGRES_DB=coruja
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - ./initdb:/docker-entrypoint-initdb.d
+      - ./postgresql/initdb:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - default
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: coruja_ollama
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - default
 
 volumes:
   pgdata:
+  ollama_data:
+
+networks:
+  default:
+    driver: bridge

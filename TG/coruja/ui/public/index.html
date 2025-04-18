@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coruja - Assistente de Estudos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .chat-container {
+            height: calc(100vh - 160px);
+            overflow-y: auto;
+        }
+        .message {
+            max-width: 80%;
+            margin: 8px;
+            padding: 12px;
+            border-radius: 12px;
+        }
+        .coruja-message {
+            background-color: #e2e8f0;
+            margin-right: auto;
+        }
+        .user-message {
+            background-color: #4299e1;
+            color: white;
+            margin-left: auto;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .option-button {
+            padding: 8px;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            text-align: left;
+            transition: all 0.2s;
+        }
+        .option-button:hover {
+            background-color: #edf2f7;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Cabeçalho -->
+        <header class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold">Coruja - Assistente de Estudos</h1>
+            <div class="flex items-center space-x-4">
+                <span id="pontuacao" class="text-lg font-semibold">Pontos: 0</span>
+                <button id="ranking-btn" class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+                    Ver Ranking
+                </button>
+            </div>
+        </header>
+
+        <!-- Container do Chat -->
+        <div class="bg-white rounded-lg shadow-lg">
+            <div id="chat-container" class="chat-container p-4">
+                <!-- As mensagens serão inseridas aqui -->
+            </div>
+
+            <!-- Área de Input -->
+            <div class="border-t p-4">
+                <form id="chat-form" class="flex space-x-4">
+                    <input type="text" 
+                           id="user-input" 
+                           class="flex-1 border rounded-lg px-4 py-2"
+                           placeholder="Digite sua resposta..."
+                           required>
+                    <button type="submit" 
+                            id="send-btn" 
+                            class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Ranking -->
+    <div id="ranking-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg p-6 w-96">
+            <h2 class="text-xl font-bold mb-4">Ranking Semanal</h2>
+            <div id="ranking-list" class="space-y-2">
+                <!-- Ranking será inserido aqui -->
+            </div>
+            <button id="close-ranking" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg w-full">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

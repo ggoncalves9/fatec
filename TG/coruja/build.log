@@ -1,0 +1,55 @@
+Building backend
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  32.77kB
+Step 1/11 : FROM python:3.11-slim
+ ---> 0334b36fd0eb
+Step 2/11 : WORKDIR /app
+ ---> Running in a173bf08c3c7
+ ---> Removed intermediate container a173bf08c3c7
+ ---> ced98511a291
+Step 3/11 : RUN echo "deb http://archive.debian.org/debian/ bullseye main" > /etc/apt/sources.list &&     echo "deb http://archive.debian.org/debian-security bullseye/updates main" >> /etc/apt/sources.list &&     apt-get update &&     apt-get install -y --no-install-recommends         libpq-dev         gcc         curl         python3-dev     && apt-get clean     && rm -rf /var/lib/apt/lists/*
+ ---> Running in 783a754c3f4c
+Ign:1 http://archive.debian.org/debian bullseye InRelease
+Ign:2 http://archive.debian.org/debian-security bullseye/updates InRelease
+Ign:3 http://deb.debian.org/debian bookworm InRelease
+Ign:4 http://deb.debian.org/debian bookworm-updates InRelease
+Ign:5 http://deb.debian.org/debian-security bookworm-security InRelease
+Ign:1 http://archive.debian.org/debian bullseye InRelease
+Ign:2 http://archive.debian.org/debian-security bullseye/updates InRelease
+Ign:3 http://deb.debian.org/debian bookworm InRelease
+Ign:4 http://deb.debian.org/debian bookworm-updates InRelease
+Ign:5 http://deb.debian.org/debian-security bookworm-security InRelease
+Ign:1 http://archive.debian.org/debian bullseye InRelease
+Ign:2 http://archive.debian.org/debian-security bullseye/updates InRelease
+Ign:3 http://deb.debian.org/debian bookworm InRelease
+Ign:4 http://deb.debian.org/debian bookworm-updates InRelease
+Ign:5 http://deb.debian.org/debian-security bookworm-security InRelease
+Err:1 http://archive.debian.org/debian bullseye InRelease
+  Could not connect to archive.debian.org:80 (151.101.66.132). - connect (111: Connection refused) Could not connect to archive.debian.org:80 (151.101.2.132). - connect (111: Connection refused) Could not connect to archive.debian.org:80 (151.101.194.132). - connect (111: Connection refused) Could not connect to archive.debian.org:80 (151.101.130.132). - connect (111: Connection refused)
+Err:2 http://archive.debian.org/debian-security bullseye/updates InRelease
+  Unable to connect to archive.debian.org:http:
+Err:3 http://deb.debian.org/debian bookworm InRelease
+  Could not connect to debian.map.fastlydns.net:80 (151.101.250.132). - connect (111: Connection refused) Unable to connect to deb.debian.org:http:
+Err:4 http://deb.debian.org/debian bookworm-updates InRelease
+  Unable to connect to deb.debian.org:http:
+Err:5 http://deb.debian.org/debian-security bookworm-security InRelease
+  Unable to connect to deb.debian.org:http:
+Reading package lists...
+[91mW: Failed to fetch http://archive.debian.org/debian/dists/bullseye/InRelease  Could not connect to archive.debian.org:80 (151.101.66.132). - connect (111: Connection refused) Could not connect to archive.debian.org:80 (151.101.2.132). - connect (111: Connection refused) Could not connect to archive.debian.org:80 (151.101.194.132). - connect (111: Connection refused) Could not connect to archive.debian.org:80 (151.101.130.132). - connect (111: Connection refused)
+W: Failed to fetch http://archive.debian.org/debian-security/dists/bullseye/updates/InRelease  Unable to connect to archive.debian.org:http:
+W: Failed to fetch http://deb.debian.org/debian/dists/bookworm/InRelease  Could not connect to debian.map.fastlydns.net:80 (151.101.250.132). - connect (111: Connection refused) Unable to connect to deb.debian.org:http:
+W: Failed to fetch http://deb.debian.org/debian/dists/bookworm-updates/InRelease  Unable to connect to deb.debian.org:http:
+W: Failed to fetch http://deb.debian.org/debian-security/dists/bookworm-security/InRelease  Unable to connect to deb.debian.org:http:
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+[0mReading package lists...
+Building dependency tree...
+Reading state information...
+[91mE: Unable to locate package libpq-dev
+E: Unable to locate package gcc
+E: Unable to locate package curl
+E: Unable to locate package python3-dev
+[0mThe command '/bin/sh -c echo "deb http://archive.debian.org/debian/ bullseye main" > /etc/apt/sources.list &&     echo "deb http://archive.debian.org/debian-security bullseye/updates main" >> /etc/apt/sources.list &&     apt-get update &&     apt-get install -y --no-install-recommends         libpq-dev         gcc         curl         python3-dev     && apt-get clean     && rm -rf /var/lib/apt/lists/*' returned a non-zero code: 100
+Service 'backend' failed to build : Build failed
