@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  db_postgres:
+    image: postgres:15
+    container_name: coruja_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: coruja_user
+      POSTGRES_PASSWORD: coruja_pass
+      POSTGRES_DB: coruja_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d
+
+volumes:
+  pgdata:
